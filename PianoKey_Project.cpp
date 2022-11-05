@@ -13,7 +13,9 @@ int main()
 
 	// Menu Selection that appear on the screen
 	cout << endl;
-	cout << "                              WELCOME TO PIANO KEYS APP        " << endl;
+	cout << "                   ********************************************" << endl;
+	cout << "                   ********************************************" << endl;
+	cout << "                   *****      WELCOME TO PIANO KEYS APP   *****" << endl;
 	cout << "                   ********************************************" << endl;
 	cout << "                   ********************************************" << endl;
 	cout << endl;
@@ -25,7 +27,8 @@ int main()
 	cout << "                            [1]- Check the program" << endl;
 	cout << "                            [2]- Build the program" << endl;
 
-	cin >> input;
+	do {
+		cin >> input;
 		if (input == 1) {
 			cout << "                                    SELECT A SCALE" << endl;
 			cout << "                                    [M] MAJOR" << endl;
@@ -37,12 +40,13 @@ int main()
 			cout << endl;
 			k.print();
 		}
-		else if (input == 2)
+		if (input == 2)
 		{
-				cout << "                 Please select a scale" << endl;
-				cout << "                 [1]- Major" << endl;
-				cout << "                 [2]- Minor" << endl;
-				int inp = 0;
+			cout << "                 Please select a scale" << endl;
+			cout << "                 [1]- Major" << endl;
+			cout << "                 [2]- Minor" << endl;
+			int inp = 0;
+			do {
 				cin >> inp;
 
 				if (inp == 1) {
@@ -54,9 +58,11 @@ int main()
 				else {
 					cout << "Invalid Scale selected" << endl;
 				}
-			}
-		else {
-			cout << "You have entered incorrect choice" << endl;
+
+			} while (inp);
 		}
+
+	} while (0);
+
 	return 0;
 }
